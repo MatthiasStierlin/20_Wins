@@ -1,6 +1,6 @@
 #!/bin/bash
-# Skript: 20_Gewinnt.sh
-# Aufruf: 20_Gewinnt.sh
+# Script: 20_wins.sh
+# Call up: 20_wins.sh
 # Matthias Stierlin
 
 declare score=0
@@ -9,8 +9,8 @@ declare gameversion=''
 declare gamemode=1
 
 #Introduction
-echo "Welcome to 20 Gewinnt!"
-echo "20 Gewinnt! is a short mathematical game."
+echo "Welcome to 20 Wins!"
+echo "20 Wins! is a short mathematical game."
 echo
 
 #
@@ -81,13 +81,13 @@ classic() {
 
                 # Validate input
                 if [[ $player1Input -lt $(($score + 1)) ]] || [[ $player1Input -gt $(($score + 2)) ]]; then
-                    echo "Fehlerhafte Ausgabe"
+                    echo "Wrong input!"
                     continue
                 elif [[ $player1Input -gt 20 ]]; then
-                    echo "Idiot, sag 20!"
+                    echo "Idiot, say 20!"
                     continue
                 else
-                    # Eingabe korrekt, weiter geht's
+                    # Input is correct, carry on
                     break;
                 fi
             done
@@ -111,13 +111,13 @@ classic() {
             
                 # Validate input
                 if [[ $player2Input -lt $(($score + 1)) ]] || [[ $player2Input -gt $(($score + 2)) ]]; then
-                    echo "Wrong input"
+                    echo "Wrong input!"
                     continue
                 elif [[ $player2Input -gt 20 ]]; then
                     echo "Would you just say 20!"
                     continue
                 else
-                    # Eingabe korrekt, weiter geht's
+                    # Input is correct, carry on
                     break;
                 fi
             done
@@ -148,13 +148,13 @@ classic() {
 
                 # Validate input
                 if [[ $player1Input -lt $(($score + 1)) ]] || [[ $player1Input -gt $(($score + 2)) ]]; then
-                    echo "Wrong input"
+                    echo "Wrong input!"
                     continue
                 elif [[ $player1Input -gt 20 ]]; then
                     echo "Would you just say 20!"
                     continue
                 else
-                    # Eingabe korrekt, weiter geht's
+                    # Input is correct, carry on
                     break;
                 fi
             done
@@ -379,4 +379,4 @@ done
 
 echo
 tput setaf 2
-echo "Auf Wiedersehen ☺!"
+echo "Bye bye ☺!"
